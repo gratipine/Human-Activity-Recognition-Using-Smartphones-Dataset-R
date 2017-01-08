@@ -1,10 +1,10 @@
 #Human Activity Recognition Using Smartphones Tidy Dataset#
-#Version 1.0
-#CodeBook.md
+##Version 1.0
+##CodeBook.md
 
 This is the description of the transformations ran on the data in the assignment and the properties of the tidy data extracted.
 
-##Variables of the tidy data:
+###Variables of the tidy data:
   - columns:
     - Activities
     - Subject
@@ -13,7 +13,7 @@ This is the description of the transformations ran on the data in the assignment
 
 The dataset contains the means and the standard deviations of the measurements in the X training and test data sets, gouped by Activity and Subject.
     
-##Process of deriving the transformational script:
+###Process of deriving the transformational script:
 
 1.Create a script
 
@@ -43,7 +43,7 @@ The dataset contains the means and the standard deviations of the measurements i
 10. The data frame from step 9 is written into a file in the same folder as the script.
 
 
-##Steps required from the user of the script to derive the same result:
+###Steps required from the user of the script to derive the same result:
 
 1. Put raw files from point 2 from the last part in the same folder as the script. 
 
