@@ -47,4 +47,6 @@ The dataset contains the means and the standard deviations of the measurements i
 
 1. Pull the project from github.
 
-2. Run the script.
+2. Set working directory to be the directory of the script.
+
+3. Run the script.
