@@ -15,38 +15,36 @@ The dataset contains the means and the standard deviations of the measurements i
     
 ###Process of deriving the transformational script:
 
-1.Create a script
+1. Create a script
 
-2.Put in the same folder as the script the untidy pieces of data: 
+2. Download and unzip the data given for the assignment.
+
+2. Put in the same folder as the script the untidy pieces of data: 
   - "X_test.txt"
   - "X_train.txt"
   - "y_test.txt"
   - "y_train.txt"
   - "subject_test.txt"
   - "subject_train.txt"
-  - "activity_labels.txt" - for ease of reference when constructing the script
+  - "activity_labels.txt"
+  - "features.txt"
 
-3.The script loads the first 6 pieces of data from step two.
+3. The script loads the data from step 2.
 
-4.Each piece of data is stuck together with the same type of data in data frames : X with X, y with y, subject with subject. This is done with test being the first one for correct combining of all the data later on.
+4. Each piece of data is stuck together with the same type of data in data frames : X with X, y with y, subject with subject. This is done with test being the first one for correct combining of all the data later on.
 
-5.A data frame is created out of the X measurements which holds only the means and the standard deviations of each row. This keeps the old order of measurements.
+5. The names from "features.txt" are set as the column names for the X data frame. The Y and Subject data is attached to X as columns.
 
-6.New, more descriptive names are given to the activities. The numbers 1 through 6 used for identification of activities are replaced by labels "Walking", "Walking Upstairs", "Walking Downstairs", "Sitting", "Standing", "Laying", which make it easier to understand what the measurements represent. The labels are taken from the given data set. 
+6. Only the columns with Std, Mean, Activity and Subject in the name are copied in a temporary data set, fulfilling step two of the requirements.
 
-7. Proper names are put to the columns in the dataset - "Means" and "Standart_Deviations", where previously the columns would have had to be accessed by index and their contents were unlabeled.
+7. New, more descriptive names are given to the activities by assigning them the names from the activity dataset. 
 
-8.The activities and the subjects data frames are joined to the data frame containing the means and standard deviations. The order is preserved, so this poses no problem.
+8. More descriptive names are given to the columns - a single "t" becomes "time", for example.
 
-9.A cross tabs data frame is created using plyr, which contains as a first column Activities, as second Subject and then third and fourth are means and standard deviations. 
-
-10. The data frame from step 9 is written into a file in the same folder as the script.
-
+9. A cross tabs data frame is created using plyr, which contains as a first column Activity, as second Subject and then the rest are the means of the measurements.
 
 ###Steps required from the user of the script to derive the same result:
 
-1. Put raw files from point 2 from the last part in the same folder as the script. 
+1. Pull the project from github.
 
-2. Set working directory to the script location
-
-3. Run script.
+2. Run the script.
